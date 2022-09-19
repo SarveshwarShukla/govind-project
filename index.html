@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediate with Govind</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img class="logo" src="./images/logo.png" alt="" />
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLhYoaSgxmjFOwfDOLjfdO0itYjTGgTH45" target="_blank" rel="noopener">Listen More Here</a></li>
+         
+        </ul>
+      </div>
+      <div class="content">
+        <div class="left-col">
+          <h1>
+            Meditation<br />
+             Brings<br><span>Inner Peace</span>
+          </h1>
+        </div>
+        <div class="right-col">
+          <p>Click Here to Listen</p>
+          <img id="icon" src="./images/play.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <audio id="music">
+      <source src="./images/background.mp3" type="audio/mp3" />
+    </audio>
+  </body>
+  <script>
+    let music = document.getElementById("music");
+    let icon = document.getElementById("icon");
+
+    icon.onclick =  () => {
+      if(music.paused) {
+        music.play();
+        icon.src="./images/pause.png"
+      }
+      else {
+        music.pause();
+        icon.src="./images/play.png"
+      }
+    };
+  </script>
+</html>
